@@ -1,86 +1,86 @@
+Visual AI Agent Skeleton
+An integration framework combining Daydreams and OmniParser for GUI-aware AI agents.
+Overview
+This project provides a foundation for building AI agents that can understand and interact with graphical user interfaces. By combining Daydreams for decision-making with OmniParser for visual understanding, developers can create custom solutions for visual parsing and AI-driven automation.
+Key Features
 
-# Visual AI Agent Skeleton with Daydreams and OmniParser
+Visual Understanding: Screen parsing and UI element detection using OmniParser
+Intelligent Decision Making: Context-aware processing through the Daydreams framework
+Groq Integration: Language model integration for visual analysis and action planning
+Real-time Processing: Live capture and analysis of screen content
 
-# Overview
-This project provides a skeleton base for integrating Daydreams with OmniParser to create an AI agent capable of understanding and interacting with graphical user interfaces (GUIs). It's designed as a starting point for developers to customize, extend, and adapt to specific use cases involving visual parsing and AI-driven decision-making. 
+Getting Started
+Prerequisites
 
-# Features
-Screen Parsing: Utilizes a skeleton of OmniParser functionality to analyze screenshots for UI elements.
-AI Decision Making: Leverages the Daydreams framework to make context-aware decisions based on parsed visual data.
-Groq Integration: Includes a placeholder for Groq's language model to analyze visual inputs or plan actions.
-Real-time Interaction: Simulates capturing, parsing, and acting on screens in real-time.
+Python 3.8+
+Required packages:
+bashCopypip install fastapi pydantic groq torch requests
 
-# Requirements
-Python: Version 3.8 or higher.
-Dependencies:
-fastapi
-pydantic
-groq
-torch
-requests
 
-Install dependencies with:
-bash
-pip install fastapi pydantic groq torch requests
+Environment Setup
+Configure your API key:
+bashCopyexport GROQ_API_KEY=your_api_key_here
+Installation
 
-# Setup
-Environment Variables
-GROQ_API_KEY: Set this in your environment before running the script:
-bash
-export GROQ_API_KEY=your_api_key_here
+Clone the repository
+Install dependencies
+Replace dummy model weights in weights/ with your trained models
 
-# File Structure
-This skeleton project includes:
+Project Structure
+Copy├── src/
+│   └── visual_ai_agent.py    # Main server and agent implementation
+├── util/
+│   └── omniparser.py         # OmniParser implementation
+├── tools/
+│   └── screen_capture.py     # Screen capture utilities
+└── weights/
+    ├── icon_detect/          # Icon detection models
+    └── icon_caption_florence/ # Caption generation models
+Usage
+Start the agent:
+bashCopypython src/visual_ai_agent.py
+The system will:
 
-src/visual_ai_agent.py - Main script for setting up the server and agent.
-util/omniparser.py - A skeleton OmniParser implementation.
-tools/screen_capture.py - Basic screen capture utility.
-weights/ - Contains dummy model files for:
-icon_detect/model.pt
-icon_caption_florence/model.safetensors
+Initialize an OmniParser server (default: localhost:8000)
+Start a Daydreams agent instance
+Begin processing visual input
 
-# Configuration
-OmniParser Weights: The weights provided are dummy files for demonstration. Replace these with actual trained models for real use.
-Module Imports: Adjust import statements if util.omniparser or tools.screen_capture paths differ from the skeleton setup.
+Technical Details
+Core Components
 
-# Usage
-To run the skeleton system:
+Screen Capture: Lightweight screenshot functionality
+Visual Parsing: Modular image analysis system
+Context Management: In-memory state tracking
+Decision Engine: Groq-powered analysis and planning
+Action System: Extensible interaction framework
 
-bash
-python src/visual_ai_agent.py
+Customization Points
 
-This will:
-Start a simulated OmniParser server on localhost:8000.
-Initialize a Daydreams agent with placeholder functionalities.
+Model Integration
+Server Configuration
+Agent Behavior
+Action Handlers
 
-# How It Works
-This skeleton:
-Screen Capture: Uses a basic screenshot capture function.
-Image Parsing: Simulates parsing with dummy data; actual parsing would require implementing real model logic.
-Data Storage: Stores dummy parsed data in the agent's memory context.
-Analysis: Placeholder for Groq analysis; customize with actual API calls or model interactions.
-Action: Executes mock actions based on the simulated analysis.
+Development Guide
+Testing
 
-# Customization
-Models: Replace dummy model files with your trained models.
-Server URL: Modify if not using localhost:8000.
-Agent Actions: Extend or modify actions in the Daydreams agent for your specific needs.
+Run unit tests: pytest tests/
+Check integration: pytest tests/integration/
 
-# Development
-Error Handling: Implement proper error catching and logging.
-Logging: Add detailed logging for debugging and monitoring.
-Security: Secure API key handling and consider server authentication.
+Best Practices
 
-# Testing
-Unit Tests: Write tests for each module to ensure they work as intended.
-Integration Tests: Test the interaction between components.
+Implement robust error handling
+Add comprehensive logging
+Secure credential management
+Document API changes
 
-# License
-MIT
+Contributing
+Contributions are welcome! See CONTRIBUTING.md for guidelines.
+License
+MIT License - See LICENSE for details.
+Acknowledgments
+Built with:
 
-# Acknowledgements
-Thanks to the creators of Daydreams, OmniParser, Groq, and all open-source libraries used in this skeleton.
-
-# Contributing
-just do it
-
+Daydreams Framework
+OmniParser
+Groq API
