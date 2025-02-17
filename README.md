@@ -1,5 +1,5 @@
 
-## Visual AI Agent Skeleton with Daydreams and O[mniParser
+## Visual AI Agent Skeleton with Daydreams and OmniParser
 
 # Overview
 This project provides a skeleton base for integrating Daydreams with OmniParser to create an AI agent capable of understanding and interacting with graphical user interfaces (GUIs). It's designed as a starting point for developers to customize, extend, and adapt to specific use cases involving visual parsing and AI-driven decision-making. 
