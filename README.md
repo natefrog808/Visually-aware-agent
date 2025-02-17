@@ -1,5 +1,3 @@
-## Visually-aware-agent
-
 # Visual AI Agent with Daydreams and O[mniParser
 ](https://x.com/i/grok?text=mniParser%0A)
 # Overview
